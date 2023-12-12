@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+    box-sizing: border-box;
+    font-family: 'Abril Fatface', serif;
+}
+.logo{
+    color: #fcdc1a;
+    display: flex;
+    align-items: center;
+    margin-left: 35px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+header{
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 500px;
+    padding: 25px;
+}
+/* Estilos del botón de WhatsApp */
+.whatsapp-button {
+    display: flex;
+    padding: 10px 10px;
+    background-color: #25D366;
+    color: black;
+    text-decoration: none;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-left: 200px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .whatsapp-button:hover {
+    background-color: #128C7E;
+  }
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.texto_fondo{
+    position: absolute;
+    top: 250px;
+    left: 150px;
+    background-color: #3333336d;
+    width: 850px;
+    padding: 50px;
+}
+
+.container_section{
+    
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
