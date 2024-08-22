@@ -1,13 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-*{
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
     box-sizing: border-box;
     font-family: 'Abril Fatface', serif;
 }
-.logo{
+body{
+    background-color: #000000;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
     color: #fcdc1a;
     display: flex;
     align-items: center;
@@ -15,17 +25,18 @@
     font-size: 25px;
     font-weight: bolder;
 }
-header{
-    background-color: black;
+
+header {
+    background-color: #000000;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 500px;
-    padding: 25px;
+    padding: 15px;
 }
-/* Estilos del botón de WhatsApp */
+
 .whatsapp-button {
     display: flex;
-    padding: 10px 10px;
+    padding: 5px;
     background-color: #25D366;
     color: black;
     text-decoration: none;
@@ -35,35 +46,89 @@ header{
     margin-left: 200px;
     justify-content: center;
     align-items: center;
-  }
-  
-  .whatsapp-button:hover {
-    background-color: #128C7E;
-  }
+}
 
-a{
-    text-decoration: none;
+.whatsapp-button:hover {
+    background-color: #128C7E;
+}
+
+.texto_fondo {
+    position: absolute;
+    top: 30%; /* Utilizamos porcentaje para la posición vertical */
+    left: 5%; /* Utilizamos porcentaje para la posición horizontal */
+    background-color: #3333336d;
+    width: 90%; /* Utilizamos porcentaje para el ancho */
+    max-width: 900px; /* Ancho máximo para evitar que crezca demasiado en pantallas grandes */
+    padding: 5%; /* Utilizamos porcentaje para el padding */
+}
+
+.textOne {
     color: white;
 }
 
-.texto_fondo{
-    position: absolute;
-    top: 250px;
-    left: 150px;
-    background-color: #3333336d;
-    width: 850px;
-    padding: 50px;
-}
-
-.container_section{
+/* Estilos para la sección de películas */
+#movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px; /* Espaciado alrededor del contenedor */
+    background-color: #000000; /* Fondo oscuro para la sección */
     
 }
+
+.movie {
+    width: 200px;
+    text-align: center;
+    color: white;
+    background: url('../img/1.jpeg') no-repeat center center/cover;
+
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.movie:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+
+.movie img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.movie h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Sombra para mayor legibilidad */
+}
+
+.movie p {
+    font-size: 14px;
+    color: #fcdc1a;
+    margin: 5px 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Sombra para mayor legibilidad */
+}
+
+/* Media query para ajustes en pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .texto_fondo {
+        top: 20px; /* Ajuste de la posición vertical para pantallas pequeñas */
+        left: 20px; /* Ajuste de la posición horizontal para pantallas pequeñas */
+        width: calc(100% - 40px); /* Ancho del 100% menos el padding para pantallas pequeñas */
+        padding: 20px; /* Ajuste del padding para pantallas pequeñas */
+    }
+}
+
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
+    padding: 20px;
     bottom: 0;
     width: 100%;
+    margin-top: 35px;
 }
