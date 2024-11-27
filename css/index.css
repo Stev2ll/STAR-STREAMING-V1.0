@@ -3,13 +3,12 @@
 * {
     margin: 0;
     padding: 0;
-    border: 0;
-    outline: 0;
     box-sizing: border-box;
     font-family: 'Abril Fatface', serif;
 }
-body{
-    background-color: #000000;
+
+body {
+    background-color: #000;
 }
 
 a {
@@ -19,116 +18,120 @@ a {
 
 .logo {
     color: #fcdc1a;
-    display: flex;
-    align-items: center;
     margin-left: 35px;
     font-size: 25px;
     font-weight: bolder;
 }
 
 header {
-    background-color: #000000;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 500px;
-    padding: 15px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 35px;
+}
+
+.container_whatss {
+    display: flex;
+    gap: 15px;
+}
+
+.whatsapp-button, .precio-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .whatsapp-button {
-    display: flex;
-    padding: 5px;
-    background-color: #25D366;
+    background-color: #25d366;
     color: black;
-    text-decoration: none;
-    border-radius: 15px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    margin-left: 200px;
-    justify-content: center;
-    align-items: center;
 }
 
 .whatsapp-button:hover {
-    background-color: #128C7E;
+    background-color: #128c7e;
+}
+
+.precio-button {
+    background-color: #fcdc1a;
+    color: black;
+}
+
+.precio-button:hover {
+    background-color: #867506;
 }
 
 .texto_fondo {
     position: absolute;
-    top: 30%; /* Utilizamos porcentaje para la posición vertical */
-    left: 5%; /* Utilizamos porcentaje para la posición horizontal */
-    background-color: #3333336d;
-    width: 90%; /* Utilizamos porcentaje para el ancho */
-    max-width: 900px; /* Ancho máximo para evitar que crezca demasiado en pantallas grandes */
-    padding: 5%; /* Utilizamos porcentaje para el padding */
+    top: 30%;
+    left: 5%;
+    background-color: rgba(51, 51, 51, 0.43);
+    padding: 5%;
+    max-width: 90%;
 }
 
 .textOne {
     color: white;
 }
 
-/* Estilos para la sección de películas */
 #movies-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    padding: 20px; /* Espaciado alrededor del contenedor */
-    background-color: #000000; /* Fondo oscuro para la sección */
-    
+    padding: 20px;
 }
 
 .movie {
     width: 200px;
-    text-align: center;
-    color: white;
-    background: url('../img/1.jpeg') no-repeat center center/cover;
-
+    background-color: rgba(255, 254, 254, 0.07);
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(255, 250, 250, 0.5);
     transition: transform 0.3s ease;
 }
 
 .movie:hover {
-    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+    transform: scale(1.05);
 }
 
 .movie img {
     width: 100%;
     border-radius: 10px;
-    margin-bottom: 10px;
 }
 
 .movie h3 {
     font-size: 20px;
-    margin: 10px 0;
     color: white;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Sombra para mayor legibilidad */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .movie p {
     font-size: 14px;
     color: #fcdc1a;
-    margin: 5px 0;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Sombra para mayor legibilidad */
 }
 
-/* Media query para ajustes en pantallas más pequeñas */
-@media screen and (max-width: 768px) {
-    .texto_fondo {
-        top: 20px; /* Ajuste de la posición vertical para pantallas pequeñas */
-        left: 20px; /* Ajuste de la posición horizontal para pantallas pequeñas */
-        width: calc(100% - 40px); /* Ancho del 100% menos el padding para pantallas pequeñas */
-        padding: 20px; /* Ajuste del padding para pantallas pequeñas */
-    }
+.footer-content, .precios-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    width: 170px;
+}
+
+.precios {
+    width: 400px;
+    height: auto;
 }
 
 footer {
-    background-color: #000000;
+    background-color: #000;
     color: white;
     text-align: center;
     padding: 20px;
-    bottom: 0;
-    width: 100%;
-    margin-top: 35px;
 }
