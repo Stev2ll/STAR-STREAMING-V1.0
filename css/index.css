@@ -126,11 +126,13 @@ header {
 }
 
 .precios {
+    margin-top: 10%;
     width: 400px;
     height: auto;
 }
 
 footer {
+    margin-top: 150px;
     background-color: #000;
     color: white;
     text-align: center;
